@@ -4,6 +4,51 @@
   border-bottom: 3px solid transparent;
   transition: all 0.5s ease;
 }
-.main-link.active {
+.main-link.top-active {
   border-bottom: 3px solid var(--red);
+}
+.left-nav,
+.filter-panel {
+  width: 57px;
+  padding-bottom: 2rem;
+  max-height: 85vh;
+  min-height: 85vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+.filter-panel {
+  width: 380px;
+  right: -400px;
+}
+.left-nav::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+.content {
+  width: calc(100% - 57px);
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+.left-link {
+  padding: 0.65rem 1rem;
+  transition: all 0.5s ease;
+  border-right: 3px solid transparent;
+}
+.left-link:hover {
+  background: #fafafa;
+}
+.left-nav-icon {
+  display: inline-block;
+  min-width: 25px;
+  margin-right: 16px;
+}
+.left-link.left-active {
+  border-right: 3px solid var(--red);
+}
+.left-nav:hover {
+  width: 220px;
+}
+.left-nav:hover ~ .content {
+  width: calc(100% - 220px);
 }

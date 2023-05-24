@@ -1,12 +1,17 @@
 :root {
   --red: #e23a67;
+  --light: #f0f1f3;
 }
+
 img {
   display: inline-block;
   max-width: 100%;
 }
 * a {
   text-decoration: none !important;
+}
+.outline-none {
+  outline: none;
 }
 .no-break {
   word-break: keep-all;
@@ -44,6 +49,9 @@ img {
 }
 .max-h-2 {
   max-height: 2rem;
+}
+.max-h-2-3 {
+  max-height: 2.3rem;
 }
 .max-h-3 {
   max-height: 3rem;
