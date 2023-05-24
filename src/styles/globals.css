@@ -18,8 +18,14 @@ img {
 .max-w-1 {
   max-width: 1rem;
 }
+.max-w-1-5 {
+  max-width: 1.5rem;
+}
 .max-w-2 {
   max-width: 2rem;
+}
+.max-w-2-5 {
+  max-width: 2.5rem;
 }
 .max-w-3 {
   max-width: 3rem;
@@ -32,6 +38,9 @@ img {
 }
 .max-h-1 {
   max-height: 1rem;
+}
+.max-h-1-5 {
+  max-height: 1.5rem;
 }
 .max-h-2 {
   max-height: 2rem;
@@ -65,6 +74,9 @@ img {
 }
 .min-h-2 {
   min-height: 2rem;
+}
+.min-h-2-5 {
+  min-height: 2.5rem;
 }
 .min-h-3 {
   min-height: 3rem;
