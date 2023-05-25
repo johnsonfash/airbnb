@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 :root {
   --red: #e23a67;
   --light: #f0f1f3;
 }
-
+* {
+  font-family: 'Roboto', sans-serif;
+}
 img {
   display: inline-block;
   max-width: 100%;
