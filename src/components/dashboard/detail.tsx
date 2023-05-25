@@ -29,6 +29,12 @@ import user from "../../assets/profile.png";
 
 function Detail({ open, toggle }: { open: boolean; toggle?: () => void }) {
   const [display, setdisplay] = useState(false);
+  const [checkIn, setcheckIn] = useState(
+    new Date().toISOString().substr(0, 10)
+  );
+  const [checkOut, setcheckOut] = useState(
+    new Date().toISOString().substr(0, 10)
+  );
 
   useEffect(() => {
     setdisplay(open);
@@ -377,11 +383,21 @@ function Detail({ open, toggle }: { open: boolean; toggle?: () => void }) {
                 <div className="d-flex gap-4">
                   <div className="w-100">
                     <label className="text-muted">Check in</label>
-                    <Input type="date" className="bg-white mt-2" />
+                    <Input
+                      type="date"
+                      onChange={(e) => setcheckIn(e.target.value)}
+                      value={checkIn}
+                      className="bg-white mt-2"
+                    />
                   </div>
                   <div className="w-100">
                     <label className="text-muted">Check Out</label>
-                    <Input type="date" className="bg-white mt-2" />
+                    <Input
+                      onChange={(e) => setcheckOut(e.target.value)}
+                      value={checkOut}
+                      type="date"
+                      className="bg-white mt-2"
+                    />
                   </div>
                 </div>
                 <div className="mt-3">

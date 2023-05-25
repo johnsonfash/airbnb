@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import logo from "../../assets/airbnb-logo.png";
 import user from "../../assets/user.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -33,7 +33,8 @@ import Filter from "./filter";
 import Detail from "./detail";
 
 const leftNavClass = ({ isActive }: { isActive: boolean }) =>
-  `left-link d-flex align-items-center text-dark ${isActive ? "left-active" : ""
+  `left-link d-flex align-items-center text-dark ${
+    isActive ? "left-active" : ""
   }`;
 
 function Dashboard() {
@@ -51,13 +52,14 @@ function Dashboard() {
   return (
     <main>
       <nav className="d-flex align-items-center justify-content-between border-bottom px-3">
-        <div className="max-w-5 min-w-5">
+        <Link to="/" className="max-w-5 min-w-5">
           <img src={logo} alt="" />
-        </div>
+        </Link>
         <div>
           <NavLink
             className={({ isActive }) =>
-              `main-link d-inline-block text-dark ${isActive ? "top-active" : ""
+              `main-link d-inline-block text-dark ${
+                isActive ? "top-active" : ""
               }`
             }
             to="/"
@@ -66,7 +68,8 @@ function Dashboard() {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              `main-link d-inline-block text-dark ${isActive ? "top-active" : ""
+              `main-link d-inline-block text-dark ${
+                isActive ? "top-active" : ""
               }`
             }
             to="experience"
@@ -75,7 +78,8 @@ function Dashboard() {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              `main-link d-inline-block text-dark ${isActive ? "top-active" : ""
+              `main-link d-inline-block text-dark ${
+                isActive ? "top-active" : ""
               }`
             }
             to="online-experience"
