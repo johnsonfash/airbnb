@@ -6,6 +6,7 @@
 img {
   display: inline-block;
   max-width: 100%;
+  max-height: 100%;
 }
 * a {
   text-decoration: none !important;
@@ -19,6 +20,24 @@ img {
 }
 .display-7 {
   font-size: 1.5rem;
+}
+.w-60 {
+  width: 60%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-33 {
+  width: 33%;
+}
+.w-55 {
+  width: 65%;
+}
+.w-45 {
+  width: 45%;
+}
+.h-60 {
+  height: 60%;
 }
 .max-w-1 {
   max-width: 1rem;

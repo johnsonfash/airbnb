@@ -16,7 +16,6 @@ import {
   faMinus,
   faPersonSkiing,
   faPlus,
-  faShower,
   faSunPlantWilt,
   faTableTennis,
   faTowerObservation,
@@ -31,10 +30,10 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { faAirbnb, faPagelines } from "@fortawesome/free-brands-svg-icons";
 import Filter from "./filter";
+import Detail from "./detail";
 
 const leftNavClass = ({ isActive }: { isActive: boolean }) =>
-  `left-link d-flex align-items-center text-dark ${
-    isActive ? "left-active" : ""
+  `left-link d-flex align-items-center text-dark ${isActive ? "left-active" : ""
   }`;
 
 function Dashboard() {
@@ -58,8 +57,7 @@ function Dashboard() {
         <div>
           <NavLink
             className={({ isActive }) =>
-              `main-link d-inline-block text-dark ${
-                isActive ? "top-active" : ""
+              `main-link d-inline-block text-dark ${isActive ? "top-active" : ""
               }`
             }
             to="/"
@@ -68,8 +66,7 @@ function Dashboard() {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              `main-link d-inline-block text-dark ${
-                isActive ? "top-active" : ""
+              `main-link d-inline-block text-dark ${isActive ? "top-active" : ""
               }`
             }
             to="experience"
@@ -78,8 +75,7 @@ function Dashboard() {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              `main-link d-inline-block text-dark ${
-                isActive ? "top-active" : ""
+              `main-link d-inline-block text-dark ${isActive ? "top-active" : ""
               }`
             }
             to="online-experience"
@@ -96,7 +92,7 @@ function Dashboard() {
           <button className="btn btn-dark max-w-2-5 min-h-2-5 d-inline-flex align-items-center justify-content-center py-2">
             <FontAwesomeIcon icon={faBorderAll} className="fs-5" />
           </button>
-          <button className="btn btn-light max-w-2-5 min-h-2-5 d-inline-flex align-items-center justify-content-center py-2">
+          <button className="btn bg-light btn-light max-w-2-5 min-h-2-5 d-inline-flex align-items-center justify-content-center py-2">
             <FontAwesomeIcon icon={faMap} className="fs-5" />
           </button>
         </div>
@@ -135,7 +131,7 @@ function Dashboard() {
         <div>
           <button
             onClick={toggleFilter}
-            className="btn btn-light max-w-2-5 min-h-2-5 align-items-center d-inline-flex justify-content-center py-2"
+            className="btn bg-light btn-light max-w-2-5 min-h-2-5 align-items-center d-inline-flex justify-content-center py-2"
           >
             <FontAwesomeIcon icon={faFilter} />
           </button>
@@ -215,8 +211,9 @@ function Dashboard() {
           </NavLink>
         </nav>
         <Filter open={filter} />
+        <Detail open={detail} toggle={toggleDetail} />
         <div className="content py-3 px-4">
-          <Outlet />
+          <Outlet context={{ toggleDetail }} />
         </div>
       </section>
     </main>

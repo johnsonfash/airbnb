@@ -10,28 +10,27 @@ function Filter({ open }: { open: boolean }) {
 
   return (
     <div
-      className={`${
-        display ? "end-0" : ""
-      } filter-panel position-fixed shadow-lg z-index-1 p-3 bg-white`}
+      className={`${display ? "end-0" : ""
+        } filter-panel position-fixed shadow-lg z-index-1 px-3 pb-0 pt-3 bg-white`}
     >
       <div className="d-flex border-bottom pt-2 pb-3 align-items-center justify-content-between">
-        <h5 className="my-0">Filter</h5>
+        <h5 className="my-0 fw-bold">Filter</h5>
         <button className="btn text-danger py-0">
           <small>Clear All</small>
         </button>
       </div>
       <div className="fw-bold mt-3">Price range</div>
-      <small className="fw-light">The average high price is $133</small>
+      <small className="text-muted">The average high price is $133</small>
       <div className="d-flex mt-2 gap-3 justify-content-between align-items-center">
         <div>
           <label>
-            <small>Min Price</small>
+            <small className="text-muted">Min Price</small>
           </label>
           <input type="text" placeholder="$" className="form-control mt-2" />
         </div>
         <div>
           <label>
-            <small>Max Price</small>
+            <small className="text-muted">Max Price</small>
           </label>
           <input type="text" placeholder="$" className="form-control mt-2" />
         </div>
@@ -74,7 +73,7 @@ function Filter({ open }: { open: boolean }) {
         <div className="fw-bold my-3">Rooms, beds, and bath</div>
         {["Bedrooms", "Beds", "bathrooms"].map((item, i) => (
           <div key={i}>
-            <small className="fw-light">{item}</small>
+            <small className="fw-bold">{item}</small>
             <div className="d-flex justify-content-between mt-2 mb-3">
               <button className="btn btn-dark min-w-3 max-w-3 d-inline-flex justify-content-center rounded-5 border">
                 Any
@@ -97,6 +96,9 @@ function Filter({ open }: { open: boolean }) {
             </div>
           </div>
         ))}
+      </div>
+      <div className="sticky-bottom bg-white z-index-1 py-4 border-top">
+        <button disabled className="btn btn-danger rounded-3 w-100">Show 86 Homes</button>
       </div>
     </div>
   );

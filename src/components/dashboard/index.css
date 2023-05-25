@@ -19,6 +19,8 @@
 }
 .filter-panel {
   width: 380px;
+  max-height: 88vh;
+  min-height: 88vh;
   right: -400px;
 }
 .left-nav::-webkit-scrollbar {
@@ -51,4 +53,26 @@
 }
 .left-nav:hover ~ .content {
   width: calc(100% - 220px);
+}
+.detail-panel {
+  background: rgba(0, 0, 0, 0.3);
+  left: 101%;
+  transition: all 0.5s ease;
+}
+.detail-panel img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+.range-bar {
+  height: 0.6rem;
+}
+.w-98 {
+  width: 98%;
+}
+.w-96 {
+  width: 96%;
+}
+.w-84 {
+  width: 84%;
 }
