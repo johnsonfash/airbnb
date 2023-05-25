@@ -403,7 +403,7 @@ function Detail({ open, toggle }: { open: boolean; toggle?: () => void }) {
                 <div className="mt-3">
                   <label className="text-muted mb-2">Guests</label>
                   <Input type="select" className="bg-white">
-                    <option value="">1 guests</option>
+                    <option value="">1 guest</option>
                     <option value="">2 guests</option>
                   </Input>
                 </div>
