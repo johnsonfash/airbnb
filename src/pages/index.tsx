@@ -13,9 +13,9 @@ function IndexPage() {
         {
           Array(10).fill(0).map((_, i) =>
             <div className="p-3  col-md-4 col-xl-3" key={i}>
-              <div onClick={toggleDetail} className="border pointer rounded-4 overflow-hidden">
+              <div  className="border pointer rounded-4 overflow-hidden">
                 <div className='position-relative'>
-                  <img src={img} alt="" />
+                  <img src={img} alt="" onClick={toggleDetail} />
                   <button className="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle"><FontAwesomeIcon icon={faHeart} /></button>
                 </div>
                 <div className='p-3'>
