@@ -42,9 +42,8 @@ function Detail({ open, toggle }: { open: boolean; toggle?: () => void }) {
 
   return (
     <div
-      className={`${
-        display ? "start-0" : ""
-      }  w-100 d-flex z-index-3 detail-panel top-0 bottom-0 position-fixed`}
+      className={`${display ? "start-0" : ""
+        }  w-100 d-flex z-index-3 detail-panel top-0 bottom-0 position-fixed`}
     >
       <div onClick={toggle} className="h-100 w-25 text-end p-4">
         <button className="btn btn-light rounded-circle">
@@ -74,8 +73,8 @@ function Detail({ open, toggle }: { open: boolean; toggle?: () => void }) {
             <span className="d-inline-block ms-2">Superhost</span>
           </button>
         </div>
-        <div className="d-flex pt-3 gap-4 position-relative">
-          <div className="w-60">
+        <div className="d-flex pt-3 flex-wrap position-relative">
+          <div className="w-100 w-lg-60 pe-lg-2">
             <div className="d-flex mt-2 justify-content-between align-items-center">
               <h3 className="fw-bold">Whitefish Estate</h3>
               <div>
@@ -89,21 +88,21 @@ function Detail({ open, toggle }: { open: boolean; toggle?: () => void }) {
             </div>
             <div className="text-muted">Whitefish, Montana, United States</div>
             <div className="d-flex mt-3 pb-3 border-bottom">
-              <div className="d-flex align-items-center me-4 p-2">
+              <div className="d-flex align-items-center me-0 me-md-2 me-lg-0 me-xl-2 p-2">
                 <FontAwesomeIcon icon={faPersonWalkingLuggage} />
-                <span className="d-inline-block ms-2">16+ guests</span>
+                <span className="d-inline-block ms-2 no-break">16+ guests</span>
               </div>
-              <div className="d-flex align-items-center me-4 p-2">
+              <div className="d-flex align-items-center me-0 me-md-2 me-lg-0 me-xl-2 p-2">
                 <FontAwesomeIcon icon={faPersonShelter} />
-                <span className="d-inline-block ms-2">8 bedrooms</span>
+                <span className="d-inline-block ms-2 no-break">8 bedrooms</span>
               </div>
-              <div className="d-flex align-items-center me-4 p-2">
+              <div className="d-flex align-items-center me-0 me-md-2 me-lg-0 me-xl-2 p-2">
                 <FontAwesomeIcon icon={faBed} />
-                <span className="d-inline-block ms-2">8 beds</span>
+                <span className="d-inline-block ms-2 no-break">8 beds</span>
               </div>
-              <div className="d-flex align-items-center me-4 p-2">
+              <div className="d-flex align-items-center me-0 me-md-2 me-lg-0 me-xl-2 p-2">
                 <FontAwesomeIcon icon={faBath} />
-                <span className="d-inline-block ms-2">8 baths</span>
+                <span className="d-inline-block ms-2 no-break">8 baths</span>
               </div>
             </div>
             <div className="d-flex border-bottom pb-5 gap-4 pt-2 my-4 justify-content-between align-items-center">
@@ -367,8 +366,8 @@ function Detail({ open, toggle }: { open: boolean; toggle?: () => void }) {
               <div className="my-4 text-danger d-inline-block">View more</div>
             </div>
           </div>
-          <div className="w-40">
-            <div className="sticky-top">
+          <div className="w-100 w-lg-40 ps-lg-2">
+            <div className="sticky-md-top">
               <div className="p-4 bg-light rounded-4">
                 <div className="d-flex mb-3 align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -380,8 +379,8 @@ function Detail({ open, toggle }: { open: boolean; toggle?: () => void }) {
                     <span className="d-inline-block ms-2">5.0</span>
                   </div>
                 </div>
-                <div className="d-flex gap-4">
-                  <div className="w-100">
+                <div className="d-flex flex-wrap">
+                  <div className="w-100 w-md-50 pe-md-2">
                     <label className="text-muted">Check in</label>
                     <Input
                       type="date"
@@ -390,7 +389,7 @@ function Detail({ open, toggle }: { open: boolean; toggle?: () => void }) {
                       className="bg-white mt-2"
                     />
                   </div>
-                  <div className="w-100">
+                  <div className="w-100 w-md-50 ps-md-2 mt-3 mt-md-0 ">
                     <label className="text-muted">Check Out</label>
                     <Input
                       onChange={(e) => setcheckOut(e.target.value)}

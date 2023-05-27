@@ -4,7 +4,7 @@
   --light: #f0f1f3;
 }
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 img {
   display: inline-block;
@@ -159,4 +159,28 @@ img {
 }
 .z-index-off-3 {
   z-index: -3;
+}
+
+@media (min-width: 768px) {
+  .w-md-50 {
+    width: 50% !important;
+  }
+  .w-md-40 {
+    width: 40% !important;
+  }
+  .w-md-60 {
+    width: 60% !important;
+  }
+}
+
+@media (min-width: 998px) {
+  .w-lg-50 {
+    width: 50% !important;
+  }
+  .w-lg-40 {
+    width: 40% !important;
+  }
+  .w-lg-60 {
+    width: 60% !important;
+  }
 }
