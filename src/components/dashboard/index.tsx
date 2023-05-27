@@ -33,8 +33,7 @@ import Filter from "./filter";
 import Detail from "./detail";
 
 const leftNavClass = ({ isActive }: { isActive: boolean }) =>
-  `left-link d-flex align-items-center text-dark ${
-    isActive ? "left-active" : ""
+  `left-link d-flex align-items-center text-dark ${isActive ? "left-active" : ""
   }`;
 
 function Dashboard() {
@@ -58,8 +57,7 @@ function Dashboard() {
         <div>
           <NavLink
             className={({ isActive }) =>
-              `main-link d-inline-block text-dark ${
-                isActive ? "top-active" : ""
+              `main-link mx-1 mx-sm-2 d-inline-block text-dark ${isActive ? "top-active" : ""
               }`
             }
             to="/"
@@ -68,8 +66,7 @@ function Dashboard() {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              `main-link d-inline-block text-dark ${
-                isActive ? "top-active" : ""
+              `main-link mx-1 mx-sm-2 d-inline-block text-dark ${isActive ? "top-active" : ""
               }`
             }
             to="experience"
@@ -78,8 +75,7 @@ function Dashboard() {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              `main-link d-inline-block text-dark ${
-                isActive ? "top-active" : ""
+              `main-link mx-1 mx-sm-2 d-inline-block text-dark ${isActive ? "top-active" : ""
               }`
             }
             to="online-experience"
@@ -100,12 +96,12 @@ function Dashboard() {
             <FontAwesomeIcon icon={faMap} className="fs-5" />
           </button>
         </div>
-        <div className="d-flex align-items-center">
-          <Input type="select" className="bg-light border-0 d-inline-block">
+        <div className="d-flex flex-wrap flex-sm-nowrap align-items-center">
+          <Input type="select" className="bg-light me-3 border-0 d-inline-block">
             <option value="">Anywhere</option>
             <option value="">Somewhere</option>
           </Input>
-          <div className="mx-3 w-100 bg-light max-h-2-3 d-flex align-items-center p-1 rounded-2">
+          <div className="me-3 my-2 my-sm-0 w-100 bg-light max-h-2-3 d-flex align-items-center p-1 rounded-2">
             <span className="d-inline-block p-1 px-2">
               <FontAwesomeIcon icon={faCalendar} />
             </span>
@@ -216,7 +212,7 @@ function Dashboard() {
         </nav>
         <Filter open={filter} />
         <Detail open={detail} toggle={toggleDetail} />
-        <div className="content py-3 px-4">
+        <div className="content py-md-3 px-md-4">
           <Outlet context={{ toggleDetail }} />
         </div>
       </section>

@@ -3,6 +3,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useOutletContext } from 'react-router-dom';
 import img from '../assets/image-1.png'
+import PreloadImage from '../components/media/preloadImage';
 
 function IndexPage() {
   const { toggleDetail } = useOutletContext<{ toggleDetail: () => void }>()
@@ -12,10 +13,12 @@ function IndexPage() {
       <div className="d-flex flex-wrap align-items-stretch">
         {
           Array(10).fill(0).map((_, i) =>
-            <div className="p-3  col-md-4 col-xl-3" key={i}>
-              <div  className="border pointer rounded-4 overflow-hidden">
+            <div className="p-3 col-12 col-sm-6 col-md-4 col-xl-3" key={i}>
+              <div className="pointer rounded-4 overflow-hidden">
                 <div className='position-relative'>
-                  <img src={img} alt="" onClick={toggleDetail} />
+                  <div onClick={toggleDetail}>
+                    <PreloadImage src={img} lg={200} />
+                  </div>
                   <button className="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle"><FontAwesomeIcon icon={faHeart} /></button>
                 </div>
                 <div className='p-3'>
